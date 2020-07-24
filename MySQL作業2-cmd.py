@@ -88,6 +88,8 @@ while True:
 			if 0 <= int(inputcommand) <= 4:
 				if inputcommand == "0":
 					os.system("cls")
+					# 關閉資料庫連線
+					database.close()
 					CommendSelect(inputcommand)
 					break
 				elif inputcommand == "1":
@@ -129,8 +131,3 @@ while True:
 			charset = "utf8"
 		)
 		cursor = database.cursor()
-
-
-
-# 關閉資料庫連線
-database.close()
